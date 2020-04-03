@@ -1,6 +1,4 @@
 ### Hugo ###
-# Generated files by hugo
-/public/
 /resources/_gen/
 /themes/df/node_modules/
 
