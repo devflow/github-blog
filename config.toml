@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://devflow.github.io/"
 title = "devflow"
 copyright = ""
 theme = "df"
@@ -18,15 +18,16 @@ disqusShortname = "bdevflow"
 
 [permalinks]
   posts = "/posts/:filename/"
+  projects = "/projects/:filename/"
 
 [[params.social]]
   name = "twitter"
-  url  = "https://twitter.com/"
+  url  = "https://twitter.com/_devflow"
 
 [[params.social]]
   name = "email"
-  url  = "mailto:nobody@example.com"
+  url  = "mailto:admin@devflow.kr"
 
 [[params.social]]
   name = "github"
-  url  = "https://github.com/"
+  url  = "https://github.com/devflow"
