@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="container">
+    <div class="index">
+        <h1 class="title">
+            <span class="l">&lt;</span><span class="t">devflow</span><span class="g"> /&gt;</span>
+        </h1>
+
+        {{- with .Site.Params.social }}
+        <div class="social-icons">
+            {{ range . -}}
+            &nbsp; <a href="{{ .url }}" target="_blank" rel="noopener"
+                title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a> &nbsp;
+            {{- end -}}
+        </div>
+        {{- end }}
+
+     
+
+    </div>
+</div>
+{{ end }}

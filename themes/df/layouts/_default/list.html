@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="container">
+    <div class="posts">
+        <h1 class="type">{{ lower .Title }}</h1>
+
+        {{- if .Content }}
+        <div class="content">{{ .Content }}</div>
+        {{- end }}
+
+
+        <ul class="posts-list">
+            {{- range .Data.Pages }}
+            <li class="p-item">
+                <a href="{{.Permalink}}" class="clearfix">
+                    <span class="p-item-title">{{.Title}}</span>
+                    <span class="p-item-date float-right">
+                        {{ .Date.Format "06-01-02"}}
+                    </span>
+                </a>
+                {{- with .Params.tags }}
+                <p class="in-post-tags">
+                    <span class="in-post-tags-start">{</span>
+                    {{- range  . -}}
+                    <a class="in-post-tags-item" href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{.}}</a>
+                    {{- end }}
+                    <span class="in-post-tags-end">}</span>
+                </p>
+                {{- end }}
+            </li>
+            {{- end }}
+        </ul>
+
+    </div>
+</div>
+{{ end }}

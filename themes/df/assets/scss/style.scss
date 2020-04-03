@@ -1,0 +1,255 @@
+@import "_colors";
+@import "normalize.css";
+@import "src/milligram";
+@import "_prism";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+        url("../fonts/JetBrainsMono-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: $n1;
+    color: $s1;
+    font-family: "Noto Sans KR", sans-serif;
+
+    .feather {
+        width: 18px;
+        height: 18px;
+        stroke: $s1;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        vertical-align: text-top;
+    }
+
+    a {
+        color: $s2;
+
+        &:visited {
+            color: $s2;
+        }
+    }
+
+    code {
+        background-color: $n2;
+        color: $s1;
+        padding: 0.2em 0.5em;
+        font-family: "Noto Sans KR", monospace;
+    }
+
+    pre {
+        border-left-color: $f4;
+    }
+
+    .container {
+        max-width: 670px;
+    }
+
+    .nav-bar {
+        display: block;
+        height: 5.2rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: $n1;
+        width: 100%;
+        max-width: 100%;
+        z-index: 999;
+        -webkit-box-shadow: 0px 15px 23px 2px rgba(46, 52, 64, 1);
+        -moz-box-shadow: 0px 15px 23px 2px rgba(46, 52, 64, 1);
+        box-shadow: 0px 15px 23px 2px rgba(46, 52, 64, 1);
+
+        .l {
+            color: $n4;
+        }
+
+        .t {
+            color: $s1;
+        }
+
+        .g {
+            color: $n4;
+        }
+
+        .logo {
+            display: inline;
+            font-size: 1.6rem;
+            line-height: 5.2rem;
+            padding: 0;
+            font-family: "JetBrainsMono";
+            text-decoration: none;
+        }
+
+        .menu {
+            list-style: none;
+            margin-bottom: 0;
+
+            li {
+                float: left;
+                margin-bottom: 0;
+                margin-left: 0.3rem;
+                position: relative;
+
+                a {
+                    display: inline;
+                    font-family: 'JetBrainsMono';
+                    font-size: 1.6rem;
+                    line-height: 5.2rem;
+                    padding: 0;
+                    text-decoration: none;
+
+                    svg {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+    .body {
+        padding-top: 5.2rem;
+
+        article {
+            padding-top: 12rem;
+        }
+
+        .posts {
+            padding-top: 12rem;
+
+            h1.type {
+                font-family: 'JetBrainsMono', 'Noto Sans KR', sans-serif;
+            }
+
+            &-list {
+                list-style: none;
+
+                .p-item {
+                    color: $s1;
+
+                    a {
+                        display: block;
+                    }
+
+                    &-date {
+                        color: $n4;
+                    }
+
+                    &-title {
+                        font-size: 1em;
+                    }
+
+                    .in-post-tags {
+                        margin: 0;
+
+                        &-start, &-end {
+                            font-size: 0.8em;
+                        }
+
+                        &-start {
+                            margin-right: 1rem;
+
+                        }
+
+                        &-item {
+                            font-size: 0.8em;
+                            display: inline-block;
+                            color: $n4;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .post {
+            &-tags {
+                font-size: 0.8em;
+
+                .tag a {
+                    background-color: $f2;
+                    color: $n2;
+                    border-radius: 0.2em;
+                    padding: 0.2em 0.5em;
+                    margin-right: 1rem;
+                }
+            }
+
+            &-info {
+                p {
+                    font-size: 1em;
+                    color: $n4;
+                    margin: 0;
+                    font-weight: 100;
+                }
+            }
+
+            &-title {
+                margin-bottom: 12rem;
+                font-weight: bold;
+            }
+
+            .comments {
+                margin-top: 6rem;
+            }
+        }
+
+        .footer {
+            padding-top: 12rem;
+            color: $n4;
+            text-align: center;
+        }
+
+        .index {
+            padding: 12em 0;
+            text-align: center;
+
+            .title {
+                font-size: 5rem;
+                font-family: "JetBrainsMono";
+
+                .l {
+                    color: $n4;
+                }
+
+                .t {
+                    color: $s1;
+                }
+
+                .g {
+                    color: $n4;
+                }
+            }
+
+            .social-icons {
+                svg {
+                    color: $s3;
+                }
+            }
+        }
+    }
+}
+
+.s-lg {
+    display: none;
+}
+
+.s-sm {
+    display: inherit;
+}
+
+@media (min-width: 35.0rem) { 
+    .s-lg {
+        display: inherit;
+    }
+    
+    .s-sm {
+        display: none;
+    }
+}

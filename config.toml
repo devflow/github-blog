@@ -1,0 +1,32 @@
+baseURL = "/"
+title = "devflow"
+copyright = ""
+theme = "df"
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+enableRobotsTXT = true
+enableEmoji = true
+
+preserveTaxonomyNames = true
+
+disqusShortname = "bdevflow"
+
+[permalinks]
+  posts = "/posts/:filename/"
+
+[[params.social]]
+  name = "twitter"
+  url  = "https://twitter.com/"
+
+[[params.social]]
+  name = "email"
+  url  = "mailto:nobody@example.com"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/"

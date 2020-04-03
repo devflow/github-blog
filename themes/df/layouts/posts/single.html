@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="container">
+    <div class="post">
+        <article>
+
+            {{- with .Params.tags }}
+            <p class="post-tags">
+                {{- range . -}}
+                <span class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{.}}</a></span>
+                {{- end }}
+            </p>
+            {{- end }}
+
+            <div class="post-info">
+                <p>{{ dateFormat "2006-01-02 15:04-0700" .Date.Local }}</p>
+            </div>
+
+            <h1 class="post-title">
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h1>
+
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+
+        </article>
+
+        {{- if .Site.DisqusShortname }}
+        <div id="comments" class="comments">
+            {{ if .RelPermalink }}
+            <script type="text/javascript">
+                var disqus_identifier = "{{ .RelPermalink }}"
+            </script>
+            {{ end }}
+            {{ template "_internal/disqus.html" . }}
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{ end }}
