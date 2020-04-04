@@ -195,6 +195,12 @@ body {
                 font-weight: bold;
             }
 
+            &-content {
+                a {
+                    text-decoration: underline;
+                }
+            }
+
             .comments {
                 margin-top: 6rem;
             }
