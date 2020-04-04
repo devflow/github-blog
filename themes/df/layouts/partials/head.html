@@ -1,14 +1,21 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="author" content="devflow">
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="keywords" content="{{ .Site.Params.keywords }}{{ if .Params.tags }}{{ range .Params.tags }}, {{ . }}{{ end }}{{ end }}" />
 <meta name="robots" content="noodp" />
-<meta name="theme-color" content="" />
-<title>devflow - yet another blog</title>
 <link rel="canonical" href="{{ .Permalink }}" />
 
+{{ block "title" . }}
+    <title>
+        {{ if .IsHome }}
+            {{ $.Site.Title }} {{ with $.Site.Params.Subtitle }} — {{ . }} {{ end }}
+        {{ else }}
+            {{ .Title }} :: {{ $.Site.Title }} {{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}
+        {{ end }}
+    </title>
+{{ end }}
 
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/milligram" "node/node_modules/normalize.css" "assets/scss")) }}
 {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | resources.Minify | resources.Fingerprint }}
