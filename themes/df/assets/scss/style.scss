@@ -45,6 +45,11 @@ body {
 
     pre {
         border-left-color: $f4;
+        background-color: $n2;
+
+        > code {
+            white-space: normal;
+        }
     }
 
     .container {
