@@ -17,6 +17,19 @@ body {
     color: $s1;
     font-family: "Noto Sans KR", sans-serif;
 
+    &::-webkit-scrollbar {
+        width: 0.5em;
+      }
+       
+    &::-webkit-scrollbar-track {
+        background-color: $n2;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $n4;
+        border-radius: 0.25em;
+    }
+
     .feather {
         width: 18px;
         height: 18px;
@@ -36,11 +49,16 @@ body {
         }
     }
 
+    
+
+
+
     code {
         background-color: $n2;
         color: $s1;
         padding: 0.2em 0.5em;
         font-family: "Noto Sans KR", monospace;
+        
     }
 
     pre {
@@ -49,6 +67,19 @@ body {
 
         > code {
             white-space: normal;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0.25em;
+          }
+           
+        &::-webkit-scrollbar-track {
+            background-color: $n3;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $n4;
+            border-radius: 0.125em;
         }
     }
 
@@ -174,15 +205,34 @@ body {
         }
 
         .post {
+            img {
+
+                border-radius: 6px;
+        
+                -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.6);
+                -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.6);
+                box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.6);
+        
+                &[alt$="wp"] {
+                    background-color: #fff;
+                    padding: 10px;
+                }
+            }
+
             &-tags {
                 font-size: 0.8em;
 
-                .tag a {
-                    background-color: $f2;
-                    color: $n2;
-                    border-radius: 0.2em;
-                    padding: 0.2em 0.5em;
+                .tag {
+                    float: left;
+                    margin-bottom: 1rem;
                     margin-right: 1rem;
+
+                    a {
+                        background-color: $f2;
+                        color: $n2;
+                        border-radius: 0.2em;
+                        padding: 0.2em 0.5em;
+                    }
                 }
             }
 

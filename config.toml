@@ -17,6 +17,7 @@ preserveTaxonomyNames = true
 
 disqusShortname = "bdevflow"
 
+
 [permalinks]
   posts = "/posts/:filename/"
   projects = "/projects/:filename/"
