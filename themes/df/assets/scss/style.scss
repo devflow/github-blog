@@ -30,6 +30,19 @@ body {
         border-radius: 0.25em;
     }
 
+    table::-webkit-scrollbar {
+        width: 0.5em;
+      }
+       
+    table::-webkit-scrollbar-track {
+        background-color: $n2;
+    }
+    
+    table::-webkit-scrollbar-thumb {
+        background-color: $n4;
+        border-radius: 0.25em;
+    }
+
     .feather {
         width: 18px;
         height: 18px;
@@ -216,6 +229,27 @@ body {
                 &[alt$="wp"] {
                     background-color: #fff;
                     padding: 10px;
+                }
+            }
+
+            table {
+                table-layout: fixed;
+                width: 100%;
+                border-collapse: collapse;
+                display: block;
+                overflow-x: auto;
+                font-size: 1.3rem;
+
+                thead {
+                    th {
+                        border-bottom-color: $n3;
+                    }
+                }
+
+                tbody {
+                    td {
+                        border-bottom-color: $n3;
+                    }
                 }
             }
 
